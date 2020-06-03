@@ -2,6 +2,8 @@ const path = require("path");
 
 //Plugins
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const TerserPlugin = require('terser-webpack-plugin');
+
 
 module.exports = (env, argv) => ({
   entry: ["./src/script.js"],
@@ -38,6 +40,10 @@ module.exports = (env, argv) => ({
   plugins: [
     new MiniCssExtractPlugin(),
   ],
+  optimization: {
+    minimize: true,
+    minimizer: [new TerserPlugin()],
+  },
   devtool: "inline-source-map",
   devServer: {
     contentBase: "./build",

@@ -8,7 +8,7 @@
     "build": "webpack src/script.js --mode production  --config webpack.config.js",
     "start": "webpack-dev-server --hot --config webpack.config.js"
   },
-  "keywords": [], 
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -26,6 +26,7 @@
     "sass": "^1.26.7",
     "sass-loader": "^8.0.2",
     "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^3.0.3",
     "webpack": "^4.43.0",
     "webpack-dev-server": "^3.11.0",
     "webpack-md5-hash": "0.0.6"
